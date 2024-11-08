@@ -100,7 +100,7 @@ $(HELMCHART_CRD):
 	curl -s https://raw.githubusercontent.com/fluxcd/source-controller/${SOURCE_VER}/config/crd/bases/source.toolkit.fluxcd.io_helmcharts.yaml -o $(HELMCHART_CRD)
 
 $(ARTIFACT_CRD):
-	curl -s https://raw.githubusercontent.com/openfluxcd/artifact/main/config/crd/bases/openfluxcd.mandelsoft.org_artifacts.yaml -o $(ARTIFACT_CRD)
+	curl -s https://raw.githubusercontent.com/openfluxcd/artifact/main/config/crd/bases/openfluxcd.ocm.software_artifacts.yaml -o $(ARTIFACT_CRD)
 
 # Download the CRDs the controller depends on
 download-crd-deps: $(SOURCE_CRD_VER) $(GITREPO_CRD) $(BUCKET_CRD) $(OCIREPO_CRD) $(ARTIFACT_CRD) $(HELMREPO_CRD) $(HELMCHART_CRD)
